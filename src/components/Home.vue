@@ -54,7 +54,7 @@
 
 <script>
   export default {
-    computed:{
+    computed: {
       promoAds () {
         return this.$store.getters.promoAds
       },

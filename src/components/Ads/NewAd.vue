@@ -60,7 +60,7 @@
 
 <script>
   export default {
-    data(){
+    data () {
       return {
         title: '',
         description: '',
@@ -68,16 +68,17 @@
         valid: false
       }
     },
-    methods:{
-      createAd(){
-        if (this.$refs.form.validate()){
+    methods: {
+      createAd () {
+        if (this.$refs.form.validate()) {
           const ad = {
             title: this.title,
             description: this.description,
-            promo: this.promo
+            promo: this.promo,
+            imageSrc: 'https://cdn-images-1.medium.com/max/1600/1*nq9cdMxtdhQ0ZGL8OuSCUQ.jpeg'
           }
-
-          console.log(ad);
+          this.$store.dispatch('createAd', ad)
+          console.log(ad)
         }
       }
     }
